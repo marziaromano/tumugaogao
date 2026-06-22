@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TUMU GAOGAO — Ceramics</title>
+  <meta name="description" content="TUMU GAOGAO — multidisciplinary artist, Naples 1992. Ceramics and modern primitivism." />
+  <meta property="og:title" content="TUMU GAOGAO" />
+  <meta property="og:description" content="Ceramics · Modern primitivism" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top">TUMU&nbsp;GAOGAO</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">Menu</button>
+    <nav class="site-nav">
+      <a href="#shop">Ceramics</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="ig" href="" target="_blank" rel="noopener" id="nav-ig">Instagram</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-slides" id="hero-slides"></div>
+      <div class="hero-overlay">
+        <h1 class="hero-title">TUMU GAOGAO</h1>
+        <p class="hero-tagline" id="hero-tagline"></p>
+      </div>
+    </section>
+
+    <section id="shop" class="shop">
+      <div class="section-head">
+        <h2 class="section-title">Ceramics</h2>
+        <p class="section-note">Showcase — for purchases and info get in touch via <a href="" id="shop-ig" target="_blank" rel="noopener">Instagram</a>.</p>
+      </div>
+      <div class="grid" id="product-grid"></div>
+    </section>
+
+    <section id="about" class="about">
+      <h2 class="section-title">About</h2>
+      <div class="about-cols">
+        <div class="about-it" id="about-it"></div>
+        <div class="about-en" id="about-en"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="section-title">Contact</h2>
+      <p id="contact-body"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span id="footer-name"></span>
+    <a href="" id="footer-ig" target="_blank" rel="noopener"></a>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <button class="lb-close" aria-label="Close">×</button>
+    <button class="lb-prev" aria-label="Previous">‹</button>
+    <button class="lb-next" aria-label="Next">›</button>
+    <figure class="lb-figure">
+      <img class="lb-img" src="" alt="" />
+      <figcaption class="lb-caption"></figcaption>
+    </figure>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
