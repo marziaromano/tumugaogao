@@ -1,101 +1,65 @@
-/* TUMU GAOGAO — funzioni condivise tra la home e le schede prodotto.
-   Non c'è niente da modificare qui per aggiungere un pezzo:
-   i contenuti stanno in content/sito.json e content/prodotti.json. */
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TUMU GAOGAO — Ceramics</title>
+  <meta name="description" content="TUMU GAOGAO — multidisciplinary artist, Naples 1992. Ceramics and modern primitivism." />
+  <meta property="og:title" content="TUMU GAOGAO" />
+  <meta property="og:description" content="Ceramics · Modern primitivism" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top">TUMU&nbsp;GAOGAO</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">Menu</button>
+    <nav class="site-nav">
+      <a href="#shop">Ceramics</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="ig" href="" target="_blank" rel="noopener" id="nav-ig">Instagram</a>
+    </nav>
+  </header>
 
-const TG = (function () {
-  "use strict";
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-slides" id="hero-slides"></div>
+      <div class="hero-overlay">
+        <h1 class="hero-title">TUMU GAOGAO</h1>
+        <p class="hero-tagline" id="hero-tagline"></p>
+      </div>
+    </section>
 
-  const $ = (s, c) => (c || document).querySelector(s);
+    <section id="shop" class="shop">
+      <div class="section-head">
+        <h2 class="section-title">Ceramics</h2>
+        <p class="section-note">Showcase — for purchases and info get in touch via <a href="" id="shop-ig" target="_blank" rel="noopener">Instagram</a>.</p>
+      </div>
+      <div class="grid" id="product-grid"></div>
+    </section>
 
-  const esc = (s) =>
-    String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({
-      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
-    }[c]));
+    <section id="about" class="about">
+      <h2 class="section-title">About</h2>
+      <div class="about-cols">
+        <div class="about-it" id="about-it"></div>
+        <div class="about-en" id="about-en"></div>
+      </div>
+    </section>
 
-  const price = (n) => (n || n === 0 ? n + " €" : "");
+    <section id="contact" class="contact">
+      <h2 class="section-title">Contact</h2>
+      <p id="contact-body"></p>
+    </section>
+  </main>
 
-  const paragraphs = (t) =>
-    String(t || "").split(/\n\s*\n/).filter(Boolean)
-      .map((p) => `<p>${esc(p)}</p>`).join("");
+  <footer class="site-footer">
+    <span id="footer-name"></span>
+    <a href="" id="footer-ig" target="_blank" rel="noopener"></a>
+  </footer>
 
-  // Il pannello può salvare i percorsi con lo slash iniziale: li rendiamo relativi.
-  const path = (p) => String(p || "").replace(/^\/+/, "");
 
-  // "Ceramic Mugs · Set of 4" → "ceramic-mugs-set-of-4"
-  // È l'indirizzo della pagina del pezzo: prodotto.html?p=ceramic-mugs-set-of-4
-  const slug = (t) =>
-    String(t || "")
-      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-+|-+$/g, "");
-
-  async function loadJson(file) {
-    const res = await fetch(file + "?v=" + Date.now());
-    if (!res.ok) throw new Error(file + " — " + res.status);
-    return res.json();
-  }
-
-  function loadAll() {
-    return Promise.all([
-      loadJson("content/sito.json"),
-      loadJson("content/prodotti.json"),
-    ]).then(([site, prods]) => ({
-      site,
-      products: (prods.prodotti || []).filter(
-        (p) => p && p.title && (p.images || []).length
-      ),
-    }));
-  }
-
-  /* Intestazione, piè di pagina e link Instagram: uguali su tutte le pagine */
-  function chrome(site) {
-    const igUrl = "https://www.instagram.com/" + (site.instagram || "");
-    const navIg = $("#nav-ig");
-    if (navIg) navIg.href = igUrl;
-    const fname = $("#footer-name");
-    if (fname) fname.textContent = "© " + (site.name || "");
-    const fig = $("#footer-ig");
-    if (fig) {
-      fig.href = igUrl;
-      fig.textContent = "@" + (site.instagram || "");
-    }
-    return igUrl;
-  }
-
-  /* Riga "Per acquistare, contatta ..." */
-  function buyLine(site, asLink) {
-    const igUrl = "https://www.instagram.com/" + (site.instagram || "");
-    const note = site.buyNote || "Per acquistare, contatta";
-    if (!asLink) {
-      const name = site.email ? site.email : "@" + (site.instagram || "");
-      return esc(note) + " " + esc(name);
-    }
-    const link = site.email
-      ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>`
-      : `<a href="${igUrl}" target="_blank" rel="noopener">@${esc(site.instagram)}</a>`;
-    return esc(note) + " " + link;
-  }
-
-  /* Menu su mobile */
-  function mobileNav() {
-    const toggle = $(".nav-toggle"), nav = $(".site-nav");
-    if (!toggle || !nav) return;
-    toggle.addEventListener("click", () => {
-      const o = nav.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", String(o));
-    });
-    nav.addEventListener("click", (e) => {
-      if (e.target.tagName === "A") {
-        nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-
-  const LOCAL_HINT =
-    "Contenuti non caricati. Se hai aperto il file con un doppio clic dal " +
-    "computer è normale: guarda il sito dal link pubblicato.";
-
-  return { $, esc, price, paragraphs, path, slug, loadAll, chrome, buyLine, mobileNav, LOCAL_HINT };
-})();
+  <script src="common.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
