@@ -156,3 +156,33 @@ img { display: block; max-width: 100%; }
   .about-cols { grid-template-columns: 1fr; }
 }
 @media (max-width: 460px) { .grid { grid-template-columns: 1fr; } }
+
+/* ---------- Messaggio di errore caricamento contenuti ---------- */
+.load-error { grid-column: 1 / -1; color: var(--muted); font-size: 0.95rem; margin: 0; }
+
+/* ---------- Descrizione e invito al contatto ---------- */
+.card-desc {
+  margin: 0.45rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.card-buy {
+  margin: 0.5rem 0 0;
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  color: var(--terra);
+  border-top: 1px solid var(--line);
+  padding-top: 0.5rem;
+}
+.lb-desc {
+  display: block;
+  margin-top: 0.6rem;
+  color: #cfc4b4;
+  font-size: 0.86rem;
+  max-width: 46ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lb-buy { display: block; margin-top: 0.7rem; font-size: 0.82rem; color: #ece4d8; }
+.lb-buy a { color: var(--terra); }
