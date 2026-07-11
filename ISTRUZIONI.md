@@ -64,10 +64,22 @@ anche nella sezione Contatti.
 content/sito.json     → bio, contatti, slideshow      ← lo modifica il pannello
 content/prodotti.json → elenco dei pezzi              ← lo modifica il pannello
 assets/images/        → tutte le foto                 ← ci carica il pannello
-index.html            → struttura della pagina
-script.js             → legge i due JSON e disegna la pagina
+index.html            → home (griglia dei pezzi)
+prodotto.html         → scheda di UN pezzo (una sola, valida per tutti)
+common.js             → funzioni condivise dalle due pagine
+script.js             → disegna la home
+prodotto.js           → disegna la scheda del pezzo
 style.css             → grafica
 ```
+
+**Le schede dei pezzi:** ogni pezzo ha la sua pagina, all'indirizzo
+`prodotto.html?p=<titolo-del-pezzo>` (es. `prodotto.html?p=ceramic-plate-3`).
+Non devi crearla: esiste una sola `prodotto.html` che si riempie da sola in base
+al pezzo su cui si clicca. Aggiungi un pezzo dal pannello → la sua pagina c'è già,
+ed è un link condivisibile (puoi mandarlo su WhatsApp o metterlo nelle storie).
+
+⚠️ Se **cambi il titolo** di un pezzo, cambia anche l'indirizzo della sua pagina:
+i link vecchi non funzioneranno più. Con un pezzo nuovo non è un problema.
 
 **Nota:** aprendo `index.html` con un doppio clic dal computer i contenuti non
 si caricano (è una limitazione dei browser sui file locali). Guarda sempre il

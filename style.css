@@ -83,7 +83,7 @@ img { display: block; max-width: 100%; }
 
 /* ---------- Product grid ---------- */
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2.5vw, 2rem); }
-.card { cursor: zoom-in; background: none; border: none; padding: 0; text-align: left; font: inherit; color: inherit; }
+.card { display: block; cursor: pointer; background: none; border: none; padding: 0; text-align: left; font: inherit; color: inherit; text-decoration: none; }
 .card .thumb {
   position: relative; overflow: hidden; background: var(--paper);
   border: 1px solid var(--line); aspect-ratio: 1 / 1;
@@ -186,3 +186,49 @@ img { display: block; max-width: 100%; }
 }
 .lb-buy { display: block; margin-top: 0.7rem; font-size: 0.82rem; color: #ece4d8; }
 .lb-buy a { color: var(--terra); }
+
+/* ---------- Scheda del singolo pezzo ---------- */
+.product-page {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1.2rem, 5vw, 3rem) clamp(3rem, 7vw, 5rem);
+}
+.back-link {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+.back-link:hover { color: var(--terra); }
+
+.product { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(1.5rem, 5vw, 4rem); align-items: start; }
+
+.pg-main { position: relative; border: 1px solid var(--line); background: var(--paper); }
+.pg-main img { width: 100%; height: auto; display: block; cursor: zoom-in; }
+.pg-thumbs { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.7rem; }
+.pg-thumb {
+  width: 74px; height: 74px; padding: 0; cursor: pointer;
+  border: 1px solid var(--line); background: var(--paper); overflow: hidden;
+  opacity: 0.6; transition: opacity .2s, border-color .2s;
+}
+.pg-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.pg-thumb:hover { opacity: 1; }
+.pg-thumb.active { opacity: 1; border-color: var(--terra); }
+
+.product-title { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; margin: 0; line-height: 1.15; }
+.product-price { font-size: 1.25rem; color: var(--terra); margin: 0.6rem 0 0; }
+.product-desc { margin-top: 1.6rem; }
+.product-desc p { margin: 0 0 1rem; }
+.product-buy {
+  margin-top: 2rem; padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+.product-buy a { color: var(--terra); text-underline-offset: 3px; }
+
+@media (max-width: 780px) {
+  .product { grid-template-columns: 1fr; }
+}

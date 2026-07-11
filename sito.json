@@ -1,0 +1,171 @@
+{
+  "prodotti": [
+    {
+      "title": "Ceramic Plate #1",
+      "price": 180,
+      "description": "",
+      "sold": false,
+      "images": [
+        "assets/images/ceramic-plate_1.jpg",
+        "assets/images/ceramic-plate_2.jpg"
+      ]
+    },
+    {
+      "title": "Ceramic Plate #2",
+      "price": 180,
+      "description": "",
+      "sold": false,
+      "images": [
+        "assets/images/ceramic-plate-2_1.jpg",
+        "assets/images/ceramic-plate-2_2.jpg"
+      ]
+    },
+    {
+      "title": "Ceramic Plate #3",
+      "price": 130,
+      "description": "",
+      "sold": false,
+      "images": [
+        "assets/images/ceramic-plate-3_1.jpg",
+        "assets/images/ceramic-plate-3_2.jpg",
+        "assets/images/ceramic-plate-3_3.jpg",
+        "assets/images/ceramic-plate-3_4.jpg"
+      ]
+    },
+    {
+      "title": "Ceramic Plate #4",
+      "price": 150,
+      "description": "",
+      "sold": false,
+      "images": [
+        "assets/images/ceramic-plate-4_1.jpg",
+        "assets/images/ceramic-plate-4_2.jpg",
+        "assets/images/ceramic-plate-4_3.jpg",
+        "assets/images/ceramic-plate-4_4.jpg"
+      ]
+    },
+    {
+      "title": "Ceramic Plate #5",
+      "price": 150,
+      "description": "",
+      "sold": false,
+      "images": [
+        "assets/images/ceramic-plate-5_1.jpg",
+        "assets/images/ceramic-plate-5_2.jpg",
+        "assets/images/ceramic-plate-5_3.jpg",
+        "assets/images/ceramic-plate-5_4.jpg"
+      ]
+    },
+    {
+      "title": "Ceramic Plate #6",
+      "price": 180,
+      "description": "",
+      "sold": false,
+      "images": [
+        "assets/images/ceramic-plate-6_1.jpg",
+        "assets/images/ceramic-plate-6_2.jpg",
+        "assets/images/ceramic-plate-6_3.jpg",
+        "assets/images/ceramic-plate-6_4.jpg"
+      ]
+    },
+    {
+      "title": "Ceramic Plate #7",
+      "price": 180,
+      "description": "",
+      "sold": true,
+      "images": [
+        "assets/images/ceramic-plate-7_1.jpg",
+        "assets/images/ceramic-plate-7_2.jpg",
+        "assets/images/ceramic-plate-7_3.jpg"
+      ]
+    },
+    {
+      "title": "Ceramic Plate #8",
+      "price": 180,
+      "description": "",
+      "sold": true,
+      "images": [
+        "assets/images/ceramic-plate-8_1.jpg",
+        "assets/images/ceramic-plate-8_2.jpg",
+        "assets/images/ceramic-plate-8_3.jpg"
+      ]
+    },
+    {
+      "title": "Ceramic Plate #9",
+      "price": 100,
+      "description": "",
+      "sold": true,
+      "images": [
+        "assets/images/ceramic-plate-9_1.jpg",
+        "assets/images/ceramic-plate-9_2.jpg",
+        "assets/images/ceramic-plate-9_3.jpg"
+      ]
+    },
+    {
+      "title": "Ceramic Plate #10",
+      "price": 160,
+      "description": "",
+      "sold": true,
+      "images": [
+        "assets/images/ceramic-plate-10_1.jpg"
+      ]
+    },
+    {
+      "title": "Ceramic Plate #11",
+      "price": 160,
+      "description": "",
+      "sold": true,
+      "images": [
+        "assets/images/ceramic-plate-11_1.jpg",
+        "assets/images/ceramic-plate-11_2.jpg"
+      ]
+    },
+    {
+      "title": "Ceramic Bowl #1",
+      "price": 50,
+      "description": "",
+      "sold": true,
+      "images": [
+        "assets/images/ceramic-bowl-1_1.jpg",
+        "assets/images/ceramic-bowl-1_2.jpg",
+        "assets/images/ceramic-bowl-1_3.jpg"
+      ]
+    },
+    {
+      "title": "Ceramic Mugs · Set of 4",
+      "price": 160,
+      "description": "",
+      "sold": true,
+      "images": [
+        "assets/images/ceramic-mugs-set-of-4_1.jpg",
+        "assets/images/ceramic-mugs-set-of-4_2.jpg",
+        "assets/images/ceramic-mugs-set-of-4_3.jpg",
+        "assets/images/ceramic-mugs-set-of-4_4.jpg",
+        "assets/images/ceramic-mugs-set-of-4_5.jpg"
+      ]
+    },
+    {
+      "title": "Ceramic Mugs · Set of 6",
+      "price": 210,
+      "description": "",
+      "sold": true,
+      "images": [
+        "assets/images/ceramic-mugs-set-of-6_1.jpg",
+        "assets/images/ceramic-mugs-set-of-6_2.jpg",
+        "assets/images/ceramic-mugs-set-of-6_3.jpg",
+        "assets/images/ceramic-mugs-set-of-6_4.jpg",
+        "assets/images/ceramic-mugs-set-of-6_5.jpg"
+      ]
+    },
+    {
+      "title": "Ceramic Shot Glasses · Set of 6",
+      "price": 100,
+      "description": "",
+      "sold": true,
+      "images": [
+        "assets/images/ceramic-shot-glasses-set-of-6_1.jpg",
+        "assets/images/ceramic-shot-glasses-set-of-6_2.jpg"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TUMU GAOGAO</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html">TUMU&nbsp;GAOGAO</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">Menu</button>
+    <nav class="site-nav">
+      <a href="index.html#shop">Ceramics</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="ig" href="" target="_blank" rel="noopener" id="nav-ig">Instagram</a>
+    </nav>
+  </header>
+
+  <main class="product-page" id="product-page">
+    <a class="back-link" href="index.html#shop">← Tutte le ceramiche</a>
+
+    <div class="product" id="product" hidden>
+      <div class="product-gallery">
+        <div class="pg-main">
+          <span class="badge" id="p-badge" hidden>Sold out</span>
+          <img id="p-main" src="" alt="" />
+        </div>
+        <div class="pg-thumbs" id="p-thumbs"></div>
+      </div>
+
+      <div class="product-info">
+        <h1 class="product-title" id="p-title"></h1>
+        <p class="product-price" id="p-price"></p>
+        <div class="product-desc" id="p-desc"></div>
+        <p class="product-buy" id="p-buy"></p>
+      </div>
+    </div>
+
+    <p class="load-error" id="p-error" hidden></p>
+  </main>
+
+  <footer class="site-footer">
+    <span id="footer-name"></span>
+    <a href="" id="footer-ig" target="_blank" rel="noopener"></a>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <button class="lb-close" aria-label="Close">×</button>
+    <button class="lb-prev" aria-label="Previous">‹</button>
+    <button class="lb-next" aria-label="Next">›</button>
+    <figure class="lb-figure">
+      <img class="lb-img" src="" alt="" />
+      <figcaption class="lb-caption"></figcaption>
+    </figure>
+  </div>
+
+  <script src="common.js"></script>
+  <script src="prodotto.js"></script>
+</body>
+</html>
