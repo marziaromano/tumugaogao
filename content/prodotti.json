@@ -151,15 +151,6 @@
         "assets/images/ceramic-shot-glasses-set-of-6_1.jpg",
         "assets/images/ceramic-shot-glasses-set-of-6_2.jpg"
       ]
-    },
-    {
-      "title": "PROVA",
-      "price": 10000,
-      "description": "prova prova",
-      "sold": true,
-      "images": [
-        "assets/images/133947095991337116.jpg"
-      ]
     }
   ]
 }
