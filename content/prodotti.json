@@ -3,7 +3,6 @@
     {
       "title": "Ceramic Plate #1",
       "price": 180,
-      "description": "",
       "sold": false,
       "images": [
         "assets/images/ceramic-plate_1.jpg",
@@ -13,7 +12,6 @@
     {
       "title": "Ceramic Plate #2",
       "price": 180,
-      "description": "",
       "sold": false,
       "images": [
         "assets/images/ceramic-plate-2_1.jpg",
@@ -23,7 +21,6 @@
     {
       "title": "Ceramic Plate #3",
       "price": 130,
-      "description": "",
       "sold": false,
       "images": [
         "assets/images/ceramic-plate-3_1.jpg",
@@ -35,7 +32,6 @@
     {
       "title": "Ceramic Plate #4",
       "price": 150,
-      "description": "",
       "sold": false,
       "images": [
         "assets/images/ceramic-plate-4_1.jpg",
@@ -47,7 +43,6 @@
     {
       "title": "Ceramic Plate #5",
       "price": 150,
-      "description": "",
       "sold": false,
       "images": [
         "assets/images/ceramic-plate-5_1.jpg",
@@ -59,7 +54,6 @@
     {
       "title": "Ceramic Plate #6",
       "price": 180,
-      "description": "",
       "sold": false,
       "images": [
         "assets/images/ceramic-plate-6_1.jpg",
@@ -71,7 +65,6 @@
     {
       "title": "Ceramic Plate #7",
       "price": 180,
-      "description": "",
       "sold": true,
       "images": [
         "assets/images/ceramic-plate-7_1.jpg",
@@ -82,7 +75,6 @@
     {
       "title": "Ceramic Plate #8",
       "price": 180,
-      "description": "",
       "sold": true,
       "images": [
         "assets/images/ceramic-plate-8_1.jpg",
@@ -93,7 +85,6 @@
     {
       "title": "Ceramic Plate #9",
       "price": 100,
-      "description": "",
       "sold": true,
       "images": [
         "assets/images/ceramic-plate-9_1.jpg",
@@ -104,7 +95,6 @@
     {
       "title": "Ceramic Plate #10",
       "price": 160,
-      "description": "",
       "sold": true,
       "images": [
         "assets/images/ceramic-plate-10_1.jpg"
@@ -113,7 +103,6 @@
     {
       "title": "Ceramic Plate #11",
       "price": 160,
-      "description": "",
       "sold": true,
       "images": [
         "assets/images/ceramic-plate-11_1.jpg",
@@ -123,7 +112,6 @@
     {
       "title": "Ceramic Bowl #1",
       "price": 50,
-      "description": "",
       "sold": true,
       "images": [
         "assets/images/ceramic-bowl-1_1.jpg",
@@ -134,7 +122,6 @@
     {
       "title": "Ceramic Mugs · Set of 4",
       "price": 160,
-      "description": "",
       "sold": true,
       "images": [
         "assets/images/ceramic-mugs-set-of-4_1.jpg",
@@ -147,7 +134,6 @@
     {
       "title": "Ceramic Mugs · Set of 6",
       "price": 210,
-      "description": "",
       "sold": true,
       "images": [
         "assets/images/ceramic-mugs-set-of-6_1.jpg",
@@ -160,11 +146,19 @@
     {
       "title": "Ceramic Shot Glasses · Set of 6",
       "price": 100,
-      "description": "",
       "sold": true,
       "images": [
         "assets/images/ceramic-shot-glasses-set-of-6_1.jpg",
         "assets/images/ceramic-shot-glasses-set-of-6_2.jpg"
+      ]
+    },
+    {
+      "title": "PROVA",
+      "price": 10000,
+      "description": "prova prova",
+      "sold": true,
+      "images": [
+        "assets/images/133947095991337116.jpg"
       ]
     }
   ]
